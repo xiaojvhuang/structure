@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "数据结构": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
