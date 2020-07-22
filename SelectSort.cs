@@ -21,7 +21,7 @@ namespace 数据结构
             }
         }
 
-        //选择排序
+        //选择排序，从小到大
         public static void Select()
         {
             for (int i = 0; i < sortArray.Length - 1; i++)
