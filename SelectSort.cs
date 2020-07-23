@@ -12,7 +12,7 @@ namespace 数据结构
             {
                 Console.Write(m+" ");
             }
-            Select();
+            Select(sortArray);
             Console.WriteLine();
             Console.WriteLine("排序之后");
             foreach (var m in sortArray)
@@ -22,27 +22,27 @@ namespace 数据结构
         }
 
         //选择排序，从小到大
-        public static void Select()
+        public static void Select(int[] array)
         {
-            for (int i = 0; i < sortArray.Length - 1; i++)
+            for (int i = 0; i < array.Length - 1; i++)
             {
                 //最小值下标
                 int minIndex = i;
                 //最小值
-                int min = sortArray[minIndex];
-                for (int j = i + 1; j < sortArray.Length; j++)
+                int min = array[minIndex];
+                for (int j = i + 1; j < array.Length; j++)
                 {
-                    if (min > sortArray[j])
+                    if (min > array[j])
                     {
                         minIndex = j;
-                        min = sortArray[j];
+                        min = array[j];
                     }
                 }
                 //交换
-                if (min < sortArray[i])
+                if (min < array[i])
                 {
-                    sortArray[minIndex] = sortArray[i];
-                    sortArray[i] = min;
+                    array[minIndex] = array[i];
+                    array[i] = min;
                 }
             }
         }
