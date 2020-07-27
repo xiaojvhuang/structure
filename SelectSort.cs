@@ -4,9 +4,10 @@ namespace 数据结构
 {
     public class SelectSort
     {
-        static int[] sortArray = { 2, 501, 403, 708, 900, 1 };
         public static void Main(string[] args)
         {
+            int[] sortArray = { 2, 501, 403, 708, 900, 1 };
+
             Console.WriteLine("排序之前");
             foreach (var m in sortArray)
             {

@@ -2,11 +2,11 @@
 
 namespace 数据结构
 {
-    public class Bubbling
+    public class BubbleSort
     {
-        static int[] sortArray = { 2, 501, 403, 708, 900, 1 };
         public static void Main(string[] args)
         {
+            int[] sortArray = { 2, 501, 403, 708, 900, 1 };
             Console.WriteLine("排序之前");
             foreach (var m in sortArray)
             {
@@ -27,17 +27,17 @@ namespace 数据结构
             //临时变量
             int temp;
             bool flag=false;
-            for (int i = 0; i < sortArray.Length - 1; i++)
+            for (int i = 0; i < array.Length - 1; i++)
             {
-                for (int j = 0; j < sortArray.Length - 1 - i; j++)
+                for (int j = 0; j < array.Length - 1 - i; j++)
                 {
-                    if (sortArray[j] > sortArray[j + 1])
+                    if (array[j] > array[j + 1])
                     {
                         flag = true;
                         //交换值
-                        temp = sortArray[j];
-                        sortArray[j] = sortArray[j + 1];
-                        sortArray[j + 1] = temp;
+                        temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
                     }
                 }
                 //优化排序，本轮如果没发生位置交换，退出
