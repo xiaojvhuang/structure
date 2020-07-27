@@ -6,7 +6,7 @@ namespace 数据结构
     {
         public static void Main(string[] args)
         {
-            int[] sortArray = { 2, 501, 403, 708, 900, 1 };
+            int[] sortArray = { 2, 501, 403, 708, 900, 1};
             Console.WriteLine("排序前");
             foreach (var i in sortArray)
             {
@@ -44,7 +44,11 @@ namespace 数据结构
                 }
                 //完成一轮搜索后，找到插入位置
                 //前面向前搜索了一个位置所以+1
-                array[insertIndex + 1] = insertVal;
+                //insertIndex + 1 == i 优化，如果插入位置是当前位置不需要插入
+                 if (insertIndex + 1 != i)
+                {
+                    array[insertIndex + 1] = insertVal;
+                }
             }
         }
     }
