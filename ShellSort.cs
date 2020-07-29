@@ -6,7 +6,7 @@ namespace 数据结构
     {
         public static void Main(string[] args)
         {
-            int[] sortArray = {8,9,6,7,2,3,5,4,1};
+            int[] sortArray = {5,4,3,2,1};
             Console.WriteLine("排序前");
             foreach (var i in sortArray)
             {
@@ -15,6 +15,12 @@ namespace 数据结构
             Console.WriteLine("");
 
             Shell(sortArray);
+
+            Console.WriteLine("排序后");
+            foreach (var i in sortArray)
+            {
+                Console.Write(i + " ");
+            }
         }
 
         public static void Shell(int[] array)
@@ -25,6 +31,11 @@ namespace 数据结构
             //按缩小增量分组
             for (int gap = array.Length / 2; gap > 0; gap /= 2)
             {
+                //------------------------
+                count++;
+                Console.WriteLine($"第{count}轮:");
+                //------------------------
+
                 for (int i = gap; i < array.Length; i++)
                 {
                     //插入排序（移位法）
@@ -42,12 +53,14 @@ namespace 数据结构
                         //退出while时，表示已经找到temp要插入位置
                         array[j] = temp;
                     }
-                }
-                count++;
-                Console.WriteLine($"第{count}轮:");
-                foreach (var i in array)
-                {
-                    Console.Write(i + " ");
+
+                    //------------------------
+                    foreach (var m in array)
+                    {
+                        Console.Write(m + " ");
+                    }
+                    Console.WriteLine("");
+                    //-----------------------
                 }
                 Console.WriteLine("");
             }
