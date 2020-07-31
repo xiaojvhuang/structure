@@ -26,8 +26,8 @@ namespace 数据结构
         public static void Shell(int[] array)
         {
             int count = 0;
-            int j = 0;
-            int temp = 0;
+            int j;
+            int temp;
             //按缩小增量分组
             for (int gap = array.Length / 2; gap > 0; gap /= 2)
             {
