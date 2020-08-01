@@ -92,7 +92,7 @@ namespace 数据结构
             //把临时数组复制到原数组
             t = 0;
             int tempLeft = left;
-            while (t <= right)
+            while (tempLeft <= right)
             {
                 array[tempLeft] = temp[t];
                 t++;
