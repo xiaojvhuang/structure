@@ -27,7 +27,7 @@ namespace 数据结构
         //二分查找
         public static IList<int> Search(int[] array, int left, int right, int findVal)
         {
-            if (left > right)
+            if (left > right || findVal< array[left] || findVal<array[right])
             {
                 return new List<int>();
             }
