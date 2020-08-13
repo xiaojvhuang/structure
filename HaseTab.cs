@@ -33,6 +33,18 @@ namespace 数据结构
     {
         //头指针
         private Emp head;
+        //添加
+        public void Add(Emp emp)
+        {
+            if (head == null)
+            {
+                head = emp;
+            }
+            else
+            { 
+
+            }
+        }
     }
 
     //哈希表
