@@ -39,11 +39,35 @@ namespace 数据结构
             if (head == null)
             {
                 head = emp;
+                return;
             }
-            else
-            { 
+            //辅助指针
+            Emp helpPointer = head;
+            while (helpPointer.next != null)
+            {
+                //指针移到下一节点
+                helpPointer = helpPointer.next;
+            }
+            helpPointer.next = emp;
 
+        }
+
+        //遍历
+        public void List()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("当前链表为空");
+                return;
             }
+            //辅助指针
+            Emp helpPointer = head;
+            do
+            {
+                Console.WriteLine($"=> ID={helpPointer.id}name={helpPointer.name}");
+                helpPointer = helpPointer.next;
+
+            } while (helpPointer != null);
         }
     }
 
